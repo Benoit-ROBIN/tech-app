@@ -1,0 +1,26 @@
+{
+  "name": "tech-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo pour applications tech avec packages partagés",
+  "scripts": {
+    "dev": "pnpm --filter './apps/*' dev",
+    "build": "pnpm --filter './packages/*' build && pnpm --filter './apps/*' build",
+    "clean": "pnpm --filter './**' clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "typescript": "5.9.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "19.2.3",
+      "react-dom": "19.2.3",
+      "@types/react": "^19",
+      "typescript": "5.9.2"
+    }
+  }
+}
