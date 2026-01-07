@@ -35,7 +35,6 @@ pnpm install
 - `pnpm dev` - Lance toutes les apps en mode développement
 - `pnpm build` - Build tous les packages puis toutes les apps
 - `pnpm clean` - Nettoie tous les node_modules
-- `pnpm commit` - Crée un commit avec le format Conventional Commits (via commitizen)
 
 ## Conventional Commits
 
@@ -76,18 +75,13 @@ refactor(api): simplify error handling
 
 ### Créer un commit
 
-**Option 1 : Utiliser commitizen (recommandé)**
-```bash
-pnpm commit
-```
-Cela lance un assistant interactif pour créer un commit conforme.
+Utilisez simplement `git commit` comme d'habitude :
 
-**Option 2 : Commit manuel**
 ```bash
 git commit -m "feat(scope): description"
 ```
 
-⚠️ **Note** : Les messages de commit sont automatiquement validés par commitlint via un hook Git. Un commit non conforme sera rejeté.
+⚠️ **Note** : Les messages de commit sont automatiquement validés par commitlint via un hook Git. Un commit non conforme sera rejeté avec un message d'erreur indiquant ce qui ne va pas.
 
 ## Ajouter une nouvelle app
 
