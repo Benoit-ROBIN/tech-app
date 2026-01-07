@@ -6,9 +6,21 @@
   "scripts": {
     "dev": "pnpm --filter './apps/*' dev",
     "build": "pnpm --filter './packages/*' build && pnpm --filter './apps/*' build",
-    "clean": "pnpm --filter './**' clean && rm -rf node_modules"
+    "clean": "pnpm --filter './**' clean && rm -rf node_modules",
+    "prepare": "husky",
+    "commit": "cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.3.0",
+    "@commitlint/config-conventional": "^20.3.0",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.7",
     "typescript": "5.9.2"
   },
   "engines": {
