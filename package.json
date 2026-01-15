@@ -4,7 +4,8 @@
   "private": true,
   "description": "Monorepo pour applications tech avec packages partagés",
   "scripts": {
-    "dev": "pnpm --filter './apps/*' dev",
+    "start-nextjs-app": "pnpm --filter './apps/nextjs-app' dev",
+    "start-expo-app": "pnpm --filter './apps/expo-app' start",
     "build": "pnpm --filter './packages/*' build && pnpm --filter './apps/*' build",
     "clean": "pnpm --filter './**' clean && rm -rf node_modules",
     "prepare": "husky"
@@ -21,8 +22,8 @@
   },
   "pnpm": {
     "overrides": {
-      "react": "19.2.3",
-      "react-dom": "19.2.3",
+      "react": "19.1.0",
+      "react-dom": "19.1.0",
       "@types/react": "^19",
       "typescript": "5.9.2"
     }
